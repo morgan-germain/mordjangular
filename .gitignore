@@ -1,3 +1,5 @@
 /server/mordjangular/static/front
+/client/node_modules
+/client/.tmp
 
 *.pyc
