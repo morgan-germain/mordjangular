@@ -4,7 +4,9 @@ var clientApp = angular.module('clientApp', [
   'ngCookies',
   'ngResource',
   'ngSanitize',
-  'ngRoute'
+  'ngRoute',
+
+  'clientAppControllers',
 ]);
 
 clientApp.config(function ($routeProvider) {
