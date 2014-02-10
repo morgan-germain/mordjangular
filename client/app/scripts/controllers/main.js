@@ -1,7 +1,8 @@
 'use strict';
 
-angular.module('clientApp')
-  .controller('MainCtrl', function ($scope) {
+var clientApp = angular.module('clientApp', []);
+
+clientApp.controller('ClientAppCtrl', function ($scope) {
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
