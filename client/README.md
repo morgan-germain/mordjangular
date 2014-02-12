@@ -116,7 +116,7 @@ Pour visualiser l'application cliente (sans serveur), rendez-vous sur l'adresse 
 TODO
 ====
  * [TODO] installer LESS
- * [INPR] Intégration avec un projet Django
+ * [TODO] fixer l'intégration avec un projet Django (changer l'URL /static en /app)
  * [TODO] travailler avec une version dev et publier avec une version minifiée
 
 
