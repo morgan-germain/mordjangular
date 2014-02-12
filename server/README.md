@@ -178,7 +178,7 @@ Lancer le service web
 ```bash
 ~/bin/google_appengine/dev_appserver.py mordjangular/
 ```
-Vous pouvez ensuite vous rendre sur votre page web en allant sur [http://localhost:8000/](http://localhost:8080/) ou parcourir la page d'administration de la copie locale de Google App Engine en allant sur (http://localhost:8000/)[http://localhost:8000/]
+Vous pouvez ensuite vous rendre sur votre page web en allant sur [http://localhost:8080/](http://localhost:8080/) ou parcourir la page d'administration de la copie locale de Google App Engine en allant sur [http://localhost:8000/](http://localhost:8000/)
 
 Publier le site sur App Engine
 ```bash
