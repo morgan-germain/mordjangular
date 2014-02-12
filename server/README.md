@@ -22,7 +22,7 @@ mkdir server ; cd server
 
 Créez la structure du projet django avec les outils de django
 ```bash
-	django-admin.py startproject mordjangular
+django-admin.py startproject mordjangular
 ```
 
 Créez un dossier pour les fichiers statiques comme suivant :
@@ -32,7 +32,7 @@ mkdir mordjangular/static/front # Répertoire où Grunt va publier
 mkdir mordjangular/templates
 ```
 
-Créez le fichier ```./app.yaml``` 	 comme suivant :
+Créez le fichier `./app.yaml` comme suivant :
 ```yaml
 application: morgan-germain
 version: 1
@@ -59,7 +59,7 @@ handlers:
   expiration: '0'
 ```
 
-Ajoutez l’en-tête suivant au fichier settings.py :
+Ajoutez l’en-tête suivant au fichier `./settings.py` :
 ```python
 # Set up relative references with "os"
 import os
@@ -81,7 +81,7 @@ else:
 # ...
 ```
 
-Ajoutez la gestion BDD suivante dans le fichier settings.py :
+Ajoutez la gestion BDD suivante dans le fichier `settings.py` :
 ```python
 if is_appengine:
     # Running on production App Engine, so use a Google Cloud SQL database.
@@ -106,7 +106,7 @@ else:
     }
 ```
 
-Définissez le chemin vers les fichier statiques dans settings.py:
+Définissez le chemin vers les fichier statiques dans `settings.py`:
 ```python
 STATIC_ROOT = BASE_DIR + '..' + os.sep + 'static'
 
@@ -156,7 +156,7 @@ SERVER_EMAIL = 'your-system-email-add@blah.com'
 DEFAULT_FROM_EMAIL = 'default-from-email-addr@blah.com'
 ```
 
-Créez le fichier ./wsgi.py comme suivant :
+Créez le fichier `./wsgi.py` comme suivant :
 ```python
 import os
 
