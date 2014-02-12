@@ -11,29 +11,29 @@ Création de l’application web, côté serveur
 ===========================================
 
 Créer un dossier général pour l’application (à la racine du dépôt git) et se placer dedans
-'''bash
+```bash
 mkdir mordjangular ; cd mordjangular
-'''
+```
 
 Créer un dossier server et se placer dedans
-'''bash
+```bash
 mkdir server ; cd server
-'''
+```
 
 Créez la structure du projet django avec les outils de django
-'''bash
+```bash
 	django-admin.py startproject mordjangular
-'''
+```
 
 Créez un dossier pour les fichiers statiques comme suivant :
-'''bash
+```bash
 mkdir mordjangular/static
 mkdir mordjangular/static/front # Répertoire où Grunt va publier
 mkdir mordjangular/templates
-'''
+```
 
-Créez le fichier '''./app.yaml''' 	 comme suivant :
-'''yaml
+Créez le fichier ```./app.yaml``` 	 comme suivant :
+```yaml
 application: morgan-germain
 version: 1
 runtime: python27
@@ -57,10 +57,10 @@ handlers:
 - url: /static/admin
   static_dir: static/admin
   expiration: '0'
-'''
+```
 
 Ajoutez l’en-tête suivant au fichier settings.py :
-'''python
+```python
 # Set up relative references with "os"
 import os
 BASE_DIR = os.path.abspath(os.path.dirname(__file__)) + os.sep
@@ -79,10 +79,10 @@ else:
 
 # Django settings for mordjangular project.
 # ...
-'''
+```
 
 Ajoutez la gestion BDD suivante dans le fichier settings.py :
-'''python
+```python
 if is_appengine:
     # Running on production App Engine, so use a Google Cloud SQL database.
     SOUTH_DATABASE_ADAPTERS = {'default':'south.db.mysql'} 
@@ -104,10 +104,10 @@ else:
             'NAME': 'db-schema-name',
         }
     }
-'''
+```
 
 Définissez le chemin vers les fichier statiques dans settings.py:
-'''python
+```python
 STATIC_ROOT = BASE_DIR + '..' + os.sep + 'static'
 
 # URL prefix for static files.
@@ -121,30 +121,30 @@ STATICFILES_DIRS = (
      # Don't forget to use absolute paths, not relative paths.
      BASE_DIR + '_static',
 )
-'''
+```
 
 Décommentez l’application de l’administration de la BDD :
-'''python
+```python
 INSTALLED_APPS = (
     ...
     # Uncomment the next line to enable the admin:
     'django.contrib.admin',
     ...
 )
-'''
+```
 
 Spécifiez le path vers le dossier Templates :
-'''python
+```python
 TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates"
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
     BASE_DIR + '..' + os.sep + 'templates',
 )
-'''
+```
 
 Configurez ensuite l’envoie de mails en ajoutant ceci à la fin
-'''python
+```python
 # Support for django-registration and django-registration-email
 if is_appengine:
     EMAIL_BACKEND = 'djangoappengine.mail.AsyncEmailBackend'
@@ -154,10 +154,10 @@ else:
 ACCOUNT_ACTIVATION_DAYS = 7
 SERVER_EMAIL = 'your-system-email-add@blah.com'
 DEFAULT_FROM_EMAIL = 'default-from-email-addr@blah.com'
-'''
+```
 
 Créez le fichier ./wsgi.py comme suivant :
-'''python
+```python
 import os
 
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "mygaeproject.settings")
@@ -166,24 +166,24 @@ os.environ.setdefault("DJANGO_SETTINGS_MODULE", "mygaeproject.settings")
 # file. This includes Django's development server, if the WSGI_APPLICATION
 # setting points here.from django.core.wsgi import get_wsgi_application
 application = get_wsgi_application()
-'''
+```
 
 Récupérer le mailer depuis le github de Django Appengine:
-'''bash
+```bash
 mkdir djangoappengine
 wget https://github.com/django-nonrel/djangoappengine/blob/appengine-1.4/djangoappengine/mail.py -O djangoappengine/mail.py
-'''
+```
 
 Lancer le service web
-'''bash
+```bash
 ~/bin/google_appengine/dev_appserver.py mordjangular/
-'''
+```
 Enjoy http://localhost:8080/
 Enjoy http://localhost:8000/
 
 Publier le site sur App Engine
-'''bash
+```bash
 ~/bin/google_appengine/appcfg.py update mordjangular/
-'''
+```
 
 Enjoy http://morgan-germain.appspot.com/
