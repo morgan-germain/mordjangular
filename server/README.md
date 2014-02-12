@@ -178,11 +178,11 @@ Lancer le service web
 ```bash
 ~/bin/google_appengine/dev_appserver.py mordjangular/
 ```
-Vous pouvez ensuite vous rendre sur votre page web en allant sur [http://localhost:8080/] ou parcourir la page d'administration de la copie locale de Google App Engine en allant sur [http://localhost:8000/]
+Vous pouvez ensuite vous rendre sur votre page web en allant sur (http://localhost:8080/) ou parcourir la page d'administration de la copie locale de Google App Engine en allant sur (http://localhost:8000/)
 
 Publier le site sur App Engine
 ```bash
 ~/bin/google_appengine/appcfg.py update mordjangular/
 ```
 
-L'application web est maintenant publiée sur l'URL [http://morgan-germain.appspot.com/]
+L'application web est maintenant publiée sur l'URL (http://morgan-germain.appspot.com/)
