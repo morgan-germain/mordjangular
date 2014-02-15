@@ -26,6 +26,29 @@ module.exports = function (grunt) {
       dist: '../server/mordjangular/static/front'
     },
 
+    // Compiles LESS files to CSS
+    less: {
+      development: {
+        options: {
+          paths: ['<%= yeoman.app %>/styles'],
+          compress: true,
+          optimization: 2
+        },
+        files: {
+          'main.css': 'main.less'
+        }
+      },
+      production: {
+        options: {
+          paths: ['<%= yeoman.app %>/styles'],
+          cleancss: true
+        },
+        files: {
+          '<%= yeoman.app %>/styles/main.css': '<%= yeoman.app %>/styles/main.less'
+        }
+      }
+    },
+
     // Watches files for changes and runs tasks based on the changed files
     watch: {
       js: {
@@ -40,7 +63,7 @@ module.exports = function (grunt) {
         tasks: ['newer:jshint:test', 'karma']
       },
       styles: {
-        files: ['<%= yeoman.app %>/styles/{,*/}*.css'],
+        files: ['<%= yeoman.app %>/styles/{,*/}*.less'],
         tasks: ['newer:copy:styles', 'autoprefixer']
       },
       gruntfile: {
@@ -325,6 +348,8 @@ module.exports = function (grunt) {
     }
   });
 
+  // Prepare LESS compilation
+  grunt.loadNpmTasks('grunt-contrib-less');
 
   grunt.registerTask('serve', function (target) {
     if (target === 'dist') {
