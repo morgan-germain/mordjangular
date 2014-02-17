@@ -1,0 +1,14 @@
+<div id="app-navbar" ng-include="'views/subviews/header.html'"></div>
+
+<div class="jumbotron">
+  <h1>About page</h1>
+  <p class="lead">
+    Wonderful project, isn't it ?
+</div>
+
+<div class="row marketing" ng-repeat="awesomeThing in awesomeThings">
+  <h4>{{awesomeThing.name}}</h4>
+  <p>{{awesomeThing.content}}</p>
+</div>
+
+<div id="app-footer" ng-include="'views/subviews/footer.html'"></div>

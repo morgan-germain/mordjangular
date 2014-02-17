@@ -15,6 +15,14 @@ clientApp.config(function ($routeProvider) {
         templateUrl: 'views/main.html',
         controller: 'ClientAppCtrl'
       })
+      .when('/about', {
+        templateUrl: 'views/about.html',
+        controller: 'ClientAppCtrl'
+      })
+      .when('/contact', {
+        templateUrl: 'views/contact.html',
+        controller: 'ClientAppCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
