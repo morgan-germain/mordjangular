@@ -3,6 +3,10 @@
 <div class="jumbotron">
   <h1>Contact</h1>
   <p class="lead">Main contact page</p>
+
+  <button class="btn btn-default" ng-click="open()">Click to open a login modal!</button>
+  <div ng-show="selected">Selection from a modal: {{ selected }}</div>
+
 </div>
 
 <div id="app-footer" ng-include="'views/subviews/footer.html'"></div>

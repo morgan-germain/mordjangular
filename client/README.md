@@ -47,10 +47,10 @@ Création de l’application web, côté client
 mkdir myProject; cd myProject
 yo angular  # Créer le projet (inclure Bootstrap, mais pas Sass)
 ```
-Installer Angular-UI (facultatif)
----------------------------------
+Installer Angular-bootstrap (anciennement Angular-UI) (facultatif)
+------------------------------------------------------------------
 ```bash
-bower install --save angular-ui # install a dependency
+bower install --save angular-bootstrap # install a dependency
 ```
 Le fichier `bower.json` est ainsi remis à jour grâce à `--save`
 
