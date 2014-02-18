@@ -5,13 +5,12 @@ describe('Controller: ClientAppCtrl', function () {
   // load the controller's module
   beforeEach(module('clientApp'));
 
-  var ClientAppCtrl,
-    scope;
+  var scope, ctrl;
 
   // Initialize the controller and a mock scope
   beforeEach(inject(function ($controller, $rootScope) {
     scope = $rootScope.$new();
-    ClientAppCtrl = $controller('ClientAppCtrl', {
+    ctrl = $controller('ClientAppCtrl', {
       $scope: scope
     });
   }));
