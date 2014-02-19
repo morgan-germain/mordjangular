@@ -35,7 +35,7 @@ module.exports = function (grunt) {
           optimization: 2
         },
         files: {
-          'main.css': 'main.less'
+          '<%= yeoman.app %>/styles/main.css': '<%= yeoman.app %>/styles/main.less'
         }
       },
       production: {
