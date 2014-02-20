@@ -112,16 +112,28 @@ grunt
 
 Pour visualiser l'application cliente (sans serveur), rendez-vous sur l'adresse [http://localhost:9000](http://localhost:9000)
 
+Launch unit tests and BDD tests
+===============================
+
+Launch web server with live-reload
+```bash
+grunt serve
+```
+
+Launch test server with live-reload
+```bash
+grunt karma:e2e
+```
+
+Then you will be prompted to go to an URL like [http://localhost:8080/_karma_/](http://localhost:8080/_karma_/). Go there and click DEBUG button to launch tests
+
 
 TODO
 ====
- * [TODO] installer LESS
  * [TODO] fixer l'intégration avec un projet Django (changer l'URL /static en /app)
- * [TODO] travailler avec une version dev et publier avec une version minifiée
-
 
 A faire régulièrement en cours de projet
-----------------------------------------
+========================================
 Mettre à jour les outils de gestion des packages
 
 ```bash

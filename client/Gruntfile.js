@@ -59,7 +59,10 @@ module.exports = function (grunt) {
         }
       },
       jsTest: {
-        files: ['test/spec/{,*/}*.js'],
+        files: [
+          'test/spec/{,*/}*.js',
+          'test/e2e/{,*/}*.js'
+        ],
         tasks: ['newer:jshint:test', 'karma']
       },
       styles: {
@@ -344,6 +347,9 @@ module.exports = function (grunt) {
       unit: {
         configFile: 'karma.conf.js',
         singleRun: true
+      },
+      e2e: {
+        configFile: 'karma-e2e.conf.js',
       }
     }
   });
