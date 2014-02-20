@@ -15,7 +15,7 @@ describe('E2E Tests: Rooting through pages', function() {
     });
 
     it('should there a list of awesomeThings shown', function() {
-      expect(repeater('.awesomeThing div').count()).toBe(4);
+      expect(repeater('div.awesomeThing').count()).toBe(3);
     });
   });
 });
