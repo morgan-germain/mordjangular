@@ -2,14 +2,17 @@
 
 /* http://docs.angularjs.org/guide/dev_guide.e2e-testing */
 
-describe('PhoneCat App', function() {
+describe('E2E Tests: Rooting through pages', function() {
 
-  describe('Phone list view', function() {
+  describe('Main page', function() {
 
     beforeEach(function() {
-      browser().navigateTo('app/index.html');
+      browser().navigateTo('/' /*'app/index.html'*/);
     });
 
+    it('should display the correct home page', function() {
+      expect(browser().location().path()).toBe('/');
+    });
 
     it('should there a list of awesomeThings shown', function() {
       expect(repeater('.awesomeThing div').count()).toBe(4);

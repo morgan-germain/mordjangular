@@ -348,10 +348,8 @@ module.exports = function (grunt) {
         configFile: 'karma.conf.js',
         singleRun: true
       },
-      // TODO: Specify BDD testing file like belove ?
       e2e: {
         configFile: 'karma-e2e.conf.js',
-        singleRun: true
       }
     }
   });
