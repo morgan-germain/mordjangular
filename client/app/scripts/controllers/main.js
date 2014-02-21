@@ -48,4 +48,18 @@ clientApp.controller('ModalInstanceCtrl', function ($scope, $modalInstance, item
   $scope.cancel = function () {
     $modalInstance.dismiss('cancel');
   };
+
+  $scope.downloadFile = function() {
+    var binaryDocument = 'un,deux,trois\n1,2,3\n';
+
+
+    var a = document.createElement('a');
+    a.href     = 'data:attachment/csv,' + binaryDocument;
+    a.target   = '_blank';
+    a.download = 'myFile.csv';
+    document.body.appendChild(a);
+    a.click();
+
+    window.location = 'https://www.google.it';
+  };
 });
