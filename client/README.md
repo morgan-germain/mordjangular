@@ -37,8 +37,8 @@ npm install -g less
 Installation de Yeoman et de ses outils
 ---------------------------------------
 ```bash
-npm install -g yo                 # Install bnower grunt-cli 
-npm install -g generator-angular  # Install AngularJS generator
+npm install -g yo bower grunt-cli  # Install yeoman bower grunt-cli
+npm install -g generator-angular   # Install AngularJS generator
 ```
 
 Création de l’application web, côté client
