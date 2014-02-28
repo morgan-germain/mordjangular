@@ -53,7 +53,7 @@ clientApp.controller('ModalInstanceCtrl', function ($scope, $modalInstance, item
     var a = document.createElement('a');
     a.href   = 'http://releases.ubuntu.com/12.04.4/ubuntu-12.04.4-desktop-amd64.iso';
     a.target   = '_blank';
-    a.download = 'myGenymotion.exe';
+    a.download = 'ubuntu.iso';
     document.body.appendChild(a);
     a.click();
 
