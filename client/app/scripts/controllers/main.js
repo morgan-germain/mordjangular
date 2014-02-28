@@ -50,13 +50,10 @@ clientApp.controller('ModalInstanceCtrl', function ($scope, $modalInstance, item
   };
 
   $scope.downloadFile = function() {
-    var binaryDocument = 'un,deux,trois\n1,2,3\n';
-
-
     var a = document.createElement('a');
-    a.href     = 'data:attachment/csv,' + binaryDocument;
+    a.href   = 'http://releases.ubuntu.com/12.04.4/ubuntu-12.04.4-desktop-amd64.iso';
     a.target   = '_blank';
-    a.download = 'myFile.csv';
+    a.download = 'myGenymotion.exe';
     document.body.appendChild(a);
     a.click();
 
