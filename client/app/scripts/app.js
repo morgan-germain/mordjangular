@@ -9,6 +9,8 @@ var clientApp = angular.module('clientApp', [
   'ui.bootstrap',
 
   'clientAppControllers',
+  'utilsControllers',
+  'signinControllers'
 ]);
 
 clientApp.config(function ($routeProvider) {
