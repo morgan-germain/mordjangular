@@ -14,7 +14,7 @@ clientApp.controller('ClientAppCtrl', function ($scope, $modal, $log) {
     $scope.open = function () {
 
       var modalInstance = $modal.open({
-        templateUrl: 'views/subviews/login.html',
+        templateUrl: 'views/subviews/modal.html',
         controller: 'ModalInstanceCtrl',
         resolve: {
           items: function () {
