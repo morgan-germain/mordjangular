@@ -1,6 +1,6 @@
 'use strict';
 
-var clientApp = angular.module('clientAppControllers', ['ui.bootstrap']);
+var clientApp = angular.module('clientAppControllers', []);
 
 clientApp.controller('ClientAppCtrl', function ($scope, $modal, $log) {
     $scope.awesomeThings = [

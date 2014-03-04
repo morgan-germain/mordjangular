@@ -6,6 +6,8 @@ var clientApp = angular.module('clientApp', [
   'ngSanitize',
   'ngRoute',
 
+  'ui.bootstrap',
+
   'clientAppControllers',
 ]);
 
