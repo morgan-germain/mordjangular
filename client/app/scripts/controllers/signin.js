@@ -2,8 +2,8 @@
 
 var app = angular.module('signinControllers', []);
 
-app.controller('SigninController', function ($scope) {
+app.controller('SigninController', function($scope, $window) {
   $scope.onSignin = function() {
-    alert('signin');
+    $window.alert('signin');
   };
 });
