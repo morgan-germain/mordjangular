@@ -9,7 +9,6 @@ var app = angular.module('mainApp', [
   'ui.bootstrap',
 
   'clientAppControllers',
-  'utilsControllers',
   'signin'
 ]);
 

@@ -69,7 +69,11 @@ app.directive('signinForm', function() {
     controller: function ($scope, signinService) {
       $scope.signinService = signinService;
     },
-    link: function (/*scope*/) {
+    link: function (scope, element) {
+      // Hide click events that make dropdown hide itself
+      element.bind('click', function(elm) {
+        elm.stopPropagation();
+      });
     }
   };
 });
