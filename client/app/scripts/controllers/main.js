@@ -1,8 +1,8 @@
 'use strict';
 
-var clientApp = angular.module('clientAppControllers', []);
+var mainModule = angular.module('clientAppControllers', []);
 
-clientApp.controller('ClientAppCtrl', function ($scope, $modal, $log) {
+mainModule.controller('ClientAppCtrl', function ($scope, $modal, $log) {
     $scope.awesomeThings = [
       {name: 'HTML5 Boilerplate', content: 'HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.'},
       {name: 'AngularJS', content: 'AngularJS is a toolset for building the framework most suited to your application development.'},
@@ -34,7 +34,7 @@ clientApp.controller('ClientAppCtrl', function ($scope, $modal, $log) {
 // Please note that $modalInstance represents a modal window (instance) dependency.
 // It is not the same as the $modal service used above.
 
-clientApp.controller('ModalInstanceCtrl', function ($scope, $modalInstance, items) {
+mainModule.controller('ModalInstanceCtrl', function ($scope, $modalInstance, items) {
 
   $scope.items = items;
   $scope.selected = {

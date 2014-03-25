@@ -1,0 +1,40 @@
+<div>
+  <div class="genymotion-login-form-inline">
+
+    <h3>Sign in</h3>
+    <form ng-submit="signinService.login(user.username, user.password)" ng-controller="SigninController" role="form">
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="Username or email address"
+               name="username" ng-model="user.username" required />
+      </div>
+      <div class="form-group">
+        <input type="password" class="form-control" placeholder="Password"
+               name="password" ng-model="user.password" required />
+      </div>
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" name="remember-me" ng-model="user.rememberMe"/>
+          Remember me
+        </label>
+      </div>
+      
+      <p class="glyphicon glyphicon-remove">Error</p>
+
+      <p class="text-center"><button type="submit" class="btn btn-default">Sign in</button></p>
+      
+      <p class="text-center">
+        <a ng-href="#contact">
+          <button class="btn" ng-click="">Create account</button>
+        </a>
+      </p>
+
+      <a class="text-center" ng-href="#">Forgot password ?</a><br/>
+
+    </form>
+
+    <p>
+      <small>Hint - bob:secret</small>
+    </p>
+
+  </div>
+</div>

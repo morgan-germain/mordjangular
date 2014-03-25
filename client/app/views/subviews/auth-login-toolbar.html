@@ -1,0 +1,32 @@
+<div>
+  <div ng-switch on="isDropdownable">
+    <ul class="nav navbar-nav navbar-right">
+
+      <li>
+        <span ng-show="signinService.isAuthenticated()">
+          Hello {{signinService.currentUser.username}}
+        </span>
+      </li>
+      <!-- Large screen case: dropdown signin form -->
+      <li ng-switch-when="true" class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" ng-click="signinService.toggleLoginView()">
+          Login <b class="caret"></b>
+        </a>
+        <div class="dropdown-menu dropdown-menu-right">
+          <div ng-controller="dropdownController">
+            <signin-form></signin-form>
+          </div>
+        </div>
+      </li>
+      <!--/Large screen case: dropdown signin form -->
+      
+      <!-- Default case: fullscreen signin form -->
+      <li ng-switch-default>
+        <a ng-click="signinService.toggleLoginView()">Log In</a>
+      </li>
+      <!--/Default case: fullscreen signin form -->
+
+    </ul>
+    
+  </div>
+</div>

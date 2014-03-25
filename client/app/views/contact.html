@@ -11,4 +11,15 @@
   </div>
 </div>
 
+
+
+
+<!-- MGE AUTH from http://danielstudds.com/basic-angular-front-end-for-authentication-spa-part-3/ -->
+<login-toolbar></login-toolbar>
+<login></login>
+<signup></signup>
+<h2 ng-show="!security.isAuthenticated()">Welcome. Please log in.</h2>
+<h2 ng-show="security.isAuthenticated()">Hello {{security.currentUser.username}}</h2>
+<!-- /MGE -->
+
 <div id="app-footer" ng-include="'views/subviews/footer.html'"></div>

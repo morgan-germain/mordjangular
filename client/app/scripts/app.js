@@ -1,6 +1,6 @@
 'use strict';
 
-var clientApp = angular.module('clientApp', [
+var app = angular.module('mainApp', [
   'ngCookies',
   'ngResource',
   'ngSanitize',
@@ -10,10 +10,10 @@ var clientApp = angular.module('clientApp', [
 
   'clientAppControllers',
   'utilsControllers',
-  'signinControllers'
+  'signin'
 ]);
 
-clientApp.config(function ($routeProvider) {
+app.config(['$routeProvider', function ($routeProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
@@ -27,7 +27,14 @@ clientApp.config(function ($routeProvider) {
         templateUrl: 'views/contact.html',
         controller: 'ClientAppCtrl'
       })
+      .when('/login', {
+        templateUrl: 'views/login.html',
+        controller: 'SigninController',
+        access: {
+          isFree: true
+        }
+      })
       .otherwise({
         redirectTo: '/'
       });
-  });
+  }]);

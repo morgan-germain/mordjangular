@@ -2,7 +2,7 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" ng-app="clientApp"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" ng-app="clientApp"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9" ng-app="clientApp"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" ng-app="clientApp"> <!--<![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" ng-app="mainApp"> <!--<![endif]-->
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -58,9 +58,13 @@
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="scripts/app.js"></script>
+
+        <script src="scripts/signin-module.js"></script>
+        <script src="scripts/signin/controller.js"></script>
+        <script src="scripts/signin/service.js"></script>
+
         <script src="scripts/controllers/main.js"></script>
         <script src="scripts/controllers/utils.js"></script>
-        <script src="scripts/controllers/signin.js"></script>
         <!-- endbuild -->
 </body>
 </html>

@@ -11,33 +11,16 @@
     </div>
 
     <div class="collapse navbar-collapse" id="navbar-collapse-1">
-      <ul class="nav navbar-nav navbar-right">
+      <ul class="nav navbar-nav">
         <li class="active"><a ng-href="#">Home</a></li>
         <li><a ng-href="#about">About</a></li>
         <li><a ng-href="#contact">Contact</a></li>
-        <li class="dropdown">
-          <a class="dropdown-toggle" data-toggle="dropdown">Login <b class="caret"></b></a>
-          <div class="dropdown-menu dropdown-menu-right">
-
-            <div class="genymotion-login-form-inline" ng-controller="DropdownController">
-              <h3>Sign in</h3>
-              <form action="" role="form" ng-controller="SigninController">
-                <label for="user">Username or email address</label>
-                <input id="username" type="text" class="form-control"
-                       placeholder="Username or email address" ng-click="stopPropagation($event)">
-                <label for="password">Password</label>
-                <input id="password" type="password" class="form-control"
-                       placeholder="Password" ng-click="stopPropagation($event)">
-                <p>&nbsp;</p>
-                <a ng-href="#">Forgot password ?</a>
-                <a ng-href="#contact"><button class="btn" ng-click="stopPropagation($event)">Create account</button></a>
-                <button type="submit" class="btn btn-default" ng-click="stopPropagation($event);onSignin()">Sign in</button>
-              </form>
-            </div>
-
-          </div>
-        </li>
       </ul>
+
+      <!--Login form -->
+      <signin-toolbar></signin-toolbar>
+      <!--/Login form -->
+
     </div>
   </div>
 </div>
