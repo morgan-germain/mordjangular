@@ -86,18 +86,26 @@ app.directive('signinToolbar', function ($window) {
     link: function (scope, elm/*, attrs*/) {
       elm.find('.dropdown').addClass('open');
 
+    /**
+     * Currently authenticated user
+     * @type {Boolean}
+     */
+      scope.isDropdownable = false;
+
       // Update DOM to switch to dropdown or fullscreen signin toolbar
       scope.updateDropdownableStatus = function() {
-        // Change scope
         scope.isDropdownable = ($window.innerWidth >= 1300);
-        // and force DOM update
-        scope.$digest();
       };
 
       // Plug DOM update to resize event
       angular.element($window).bind('resize', function() {
         scope.updateDropdownableStatus();
+        // Force DOM update
+        scope.$digest();
       });
+
+      // Set DOM on initialization
+      scope.updateDropdownableStatus();
     }
   };
 });
