@@ -9,7 +9,8 @@ var app = angular.module('mainApp', [
   'ui.bootstrap',
 
   'clientAppControllers',
-  'signin'
+  'signin',
+  'utils'
 ]);
 
 app.config(['$routeProvider', function ($routeProvider) {

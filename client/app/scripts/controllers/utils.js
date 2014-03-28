@@ -1,21 +1,16 @@
 'use strict';
 
-var mainModule = angular.module('clientAppControllers', []);
+var utilsModule = angular.module('utils', []);
 
-mainModule.controller('ClientAppCtrl', function ($scope, $modal, $log) {
-    $scope.awesomeThings = [
-      {name: 'HTML5 Boilerplate', content: 'HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.'},
-      {name: 'AngularJS', content: 'AngularJS is a toolset for building the framework most suited to your application development.'},
-      {name: 'Karma', content: 'Spectacular Test Runner for JavaScript.'},
-    ];
+utilsModule.controller('modalController', function ($scope, $modal, $log) {
 
     // Modal handler
     $scope.items = ['item1', 'item2', 'item3'];
     $scope.open = function () {
 
       var modalInstance = $modal.open({
-        templateUrl: 'views/subviews/modal.html',
-        controller: 'modalInstanceCtrl',
+        templateUrl: 'views/subviews/auth-login-modal.html',
+        controller: 'modalInstanceSubCtrl',
         resolve: {
           items: function () {
             return $scope.items;
@@ -34,7 +29,7 @@ mainModule.controller('ClientAppCtrl', function ($scope, $modal, $log) {
 // Please note that $modalInstance represents a modal window (instance) dependency.
 // It is not the same as the $modal service used above.
 
-mainModule.controller('modalInstanceCtrl', function ($scope, $modalInstance, items) {
+utilsModule.controller('modalInstanceSubCtrl', function ($scope, $modalInstance, items) {
 
   $scope.items = items;
   $scope.selected = {
