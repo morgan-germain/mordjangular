@@ -4,25 +4,25 @@ var app = angular.module('signin');
 
 // General form controller
 app.controller('signinController',
-    ['$rootScope', '$scope', '$location', '$window', 'signinService',
-    function($rootScope, $scope, $location, $window, signinService) {
+    ['$rootScope', '$scope', '$location', '$window', '$log', 'signinService',
+    function($rootScope, $scope, $location, $window, $log, signinService) {
 
   $scope.login = 'bob@nowhere.com';
   $scope.password = 'secret';
   $scope.rememberMe = true;
 
   $scope.signin = function() {
-    $window.alert('signin with ' + $scope.login);
-
     signinService.signin({
         login: $scope.login,
         password: $scope.password,
         rememberMe: $scope.rememberMe
       },
       function(/*res*/) {
+        $log.info('Redirecting to /');
         $location.path('/');
       },
       function(/*err*/) {
+        $log.info('Handling a signin failure from controller');
         $rootScope.error = 'Failed to login';
       });
   };

@@ -10,6 +10,7 @@ app.factory('signinService', ['$http', '$cookieStore', '$log', function($http, $
   $cookieStore.remove('user');
 
   function changeUser(user) {
+    $log.info('Current user changes');
     angular.extend(currentUser, user);
   }
 
@@ -37,6 +38,14 @@ app.factory('signinService', ['$http', '$cookieStore', '$log', function($http, $
     },
     // Authenticate user with given credentials
     signin: function(user, success, error) {
+      /// HACK: make bob/secret always work
+      if (user.login === 'bob@nowhere.com' && user.password === 'secret') {
+        changeUser(user);
+        success(user);
+        return;
+      }
+      ///\HACK: make bob/secret always work
+
       $http.post('/signin', user).success(function(user){
         changeUser(user);
         success(user);
