@@ -1,19 +1,9 @@
 <div class="modal-header">
   <button type="button" class="close" ng-click="cancel()">&times;</button>
-  <h4 class="modal-title">Signin in form</h4>
+  <h4 class="modal-title">Signin form</h4>
 </div>
 <div class="modal-body">
-  
   <signin-form></signin-form>
-
-
-
-  <ul>
-    <li ng-repeat="item in items">
-     <a ng-click="selected.item = item">{{ item }}</a>
-    </li>
-  </ul>
-  Selected: <b>{{ selected.item }}</b>
 </div>
 <div class="modal-footer">
   <button class="btn btn-primary" ng-click="ok()">OK</button>

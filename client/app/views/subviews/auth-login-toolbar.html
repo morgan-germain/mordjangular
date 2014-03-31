@@ -4,12 +4,12 @@
 
       <li>
         <span ng-show="signinService.isAuthenticated()">
-          Hello {{signinService.currentUser.username}}
+          Hello {{signinService.user.email}}
         </span>
       </li>
       <!-- Large screen case: dropdown signin form -->
       <li ng-switch-when="true" class="dropdown">
-        <a class="dropdown-toggle" data-toggle="dropdown" ng-click="signinService.toggleLoginView()">
+        <a class="dropdown-toggle" data-toggle="dropdown">
           Login <b class="caret"></b>
         </a>
         <div class="dropdown-menu dropdown-menu-right">
@@ -19,8 +19,8 @@
       <!--/Large screen case: dropdown signin form -->
       
       <!-- Default case: fullscreen signin form -->
-      <li ng-switch-default ng-controller='modalController'>
-        <a ng-click="signinService.toggleLoginView(); open();">Sign In</a>
+      <li ng-switch-default ng-controller='signinModalController'>
+        <a ng-click="openModal();">Sign In</a>
         <div ng-show="selected">Selection from a modal: {{ selected }}</div>
       </li>
       <!--/Default case: fullscreen signin form -->

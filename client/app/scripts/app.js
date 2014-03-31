@@ -9,8 +9,7 @@ var app = angular.module('mainApp', [
   'ui.bootstrap',
 
   'clientAppControllers',
-  'signin',
-  'utils'
+  'signin'
 ]);
 
 app.config(['$routeProvider', function ($routeProvider) {
@@ -26,13 +25,6 @@ app.config(['$routeProvider', function ($routeProvider) {
       .when('/contact', {
         templateUrl: 'views/contact.html',
         controller: 'ClientAppCtrl'
-      })
-      .when('/login', {
-        templateUrl: 'views/login.html',
-        controller: 'SigninController',
-        access: {
-          isFree: true
-        }
       })
       .otherwise({
         redirectTo: '/'

@@ -1,3 +1,3 @@
 'use strict';
 
-angular.module('signin', []);
+angular.module('signin', ['ngCookies']);
