@@ -30,8 +30,6 @@ app.directive('signinToolbar', function ($window) {
       $scope.signinService = signinService;
     },
     link: function (scope, elm/*, attrs*/) {
-      elm.find('.dropdown').addClass('open');
-
       /**
        * Currently authenticated user
        * @type {Boolean}
