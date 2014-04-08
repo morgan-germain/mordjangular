@@ -8,7 +8,7 @@ var app = angular.module('mainApp', [
 
   'ui.bootstrap',
 
-  'clientAppControllers',
+  'mainModule',
   'signin'
 ]);
 
@@ -16,15 +16,15 @@ app.config(['$routeProvider', function ($routeProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
-        controller: 'ClientAppCtrl'
+        controller: 'mainCtrl'
       })
       .when('/about', {
         templateUrl: 'views/about.html',
-        controller: 'ClientAppCtrl'
+        controller: 'mainCtrl'
       })
       .when('/contact', {
         templateUrl: 'views/contact.html',
-        controller: 'ClientAppCtrl'
+        controller: 'mainCtrl'
       })
       .otherwise({
         redirectTo: '/'

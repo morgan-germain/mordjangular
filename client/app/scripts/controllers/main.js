@@ -1,8 +1,8 @@
 'use strict';
 
-var mainModule = angular.module('clientAppControllers', []);
+var mainModule = angular.module('mainModule', []);
 
-mainModule.controller('ClientAppCtrl', function ($scope, $modal, $log) {
+mainModule.controller('mainCtrl', function ($scope, $modal, $log) {
     $scope.awesomeThings = [
       {name: 'HTML5 Boilerplate', content: 'HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.'},
       {name: 'AngularJS', content: 'AngularJS is a toolset for building the framework most suited to your application development.'},
