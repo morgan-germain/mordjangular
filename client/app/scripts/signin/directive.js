@@ -29,9 +29,10 @@ app.directive('signinToolbar', function ($window) {
     controller: function ($scope, signinService) {
       $scope.signinService = signinService;
     },
-    link: function (scope, elm/*, attrs*/) {
+    link: function (scope) {
       /**
-       * Currently authenticated user
+       * Current window is wide enough and can show a dropdown
+       * form instead of a whole screen modal form
        * @type {Boolean}
        */
       scope.isDropdownable = false;
