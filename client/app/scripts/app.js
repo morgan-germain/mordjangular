@@ -22,8 +22,20 @@ app.config(['$routeProvider', function ($routeProvider) {
         templateUrl: 'views/about.html',
         controller: 'mainCtrl'
       })
+      .when('/artists', {
+        templateUrl: 'views/artists.html',
+        controller: 'mainCtrl'
+      })
       .when('/contact', {
         templateUrl: 'views/contact.html',
+        controller: 'mainCtrl'
+      })
+      .when('/links', {
+        templateUrl: 'views/links.html',
+        controller: 'mainCtrl'
+      })
+      .when('/services', {
+        templateUrl: 'views/services.html',
         controller: 'mainCtrl'
       })
       .otherwise({
