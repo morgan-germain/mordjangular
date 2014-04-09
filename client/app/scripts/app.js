@@ -8,8 +8,7 @@ var app = angular.module('mainApp', [
 
   'ui.bootstrap',
 
-  'mainModule',
-  'signin'
+  'mainModule'
 ]);
 
 app.config(['$routeProvider', function ($routeProvider) {
