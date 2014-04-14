@@ -15,27 +15,33 @@ app.config(['$routeProvider', function ($routeProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
-        controller: 'mainCtrl'
+        controller: 'mainCtrl',
+        activetab: 'home'
       })
       .when('/about', {
         templateUrl: 'views/about.html',
-        controller: 'mainCtrl'
+        controller: 'mainCtrl',
+        activetab: 'about'
       })
       .when('/artists', {
         templateUrl: 'views/artists.html',
-        controller: 'mainCtrl'
+        controller: 'mainCtrl',
+        activetab: 'artists'
       })
       .when('/contact', {
         templateUrl: 'views/contact.html',
-        controller: 'mainCtrl'
+        controller: 'mainCtrl',
+        activetab: 'contact'
       })
       .when('/links', {
         templateUrl: 'views/links.html',
-        controller: 'mainCtrl'
+        controller: 'mainCtrl',
+        activetab: 'links'
       })
       .when('/services', {
         templateUrl: 'views/services.html',
-        controller: 'mainCtrl'
+        controller: 'mainCtrl',
+        activetab: 'services'
       })
       .otherwise({
         redirectTo: '/'

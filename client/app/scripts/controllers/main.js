@@ -2,12 +2,15 @@
 
 var mainModule = angular.module('mainModule', []);
 
-mainModule.controller('mainCtrl', function ($scope, $modal, $log) {
+mainModule.controller('mainCtrl', ['$rootScope', '$route', '$modal', '$log', function ($scope, $route, $modal, $log) {
     $scope.awesomeThings = [
       {name: 'HTML5 Boilerplate', content: 'HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.'},
       {name: 'AngularJS', content: 'AngularJS is a toolset for building the framework most suited to your application development.'},
       {name: 'Karma', content: 'Spectacular Test Runner for JavaScript.'},
     ];
+
+    // Keep route scope to obtain active tab
+    $scope.$route = $route;
 
     // Modal handler
     $scope.items = ['item1', 'item2', 'item3'];
@@ -29,7 +32,7 @@ mainModule.controller('mainCtrl', function ($scope, $modal, $log) {
         $log.info('Modal dismissed at: ' + new Date());
       });
     };
-  });
+  }]);
 
 // Please note that $modalInstance represents a modal window (instance) dependency.
 // It is not the same as the $modal service used above.

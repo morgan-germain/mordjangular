@@ -12,11 +12,24 @@
 
     <div class="collapse navbar-collapse" id="navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class="active"><a ng-href="#services">Nos services</a></li>
-        <li><a ng-href="#about">A propos</a></li>
-        <li><a ng-href="#artists">Artistes</a></li>
-        <li><a ng-href="#contact">Nous contacter</a></li>
-        <li><a ng-href="#links">Liens</a></li>
+        <li ng-class="{active: $route.current.activetab == 'home'}">
+          <a ng-href="#"><span class="glyphicon glyphicon-home"></span></a>
+        </li>
+        <li ng-class="{active: $route.current.activetab == 'services'}">
+          <a ng-href="#services">Nos services</a>
+        </li>
+        <li ng-class="{active: $route.current.activetab == 'about'}">
+          <a ng-href="#about">A propos</a>
+        </li>
+        <li ng-class="{active: $route.current.activetab == 'artists'}">
+          <a ng-href="#artists">Artistes</a>
+        </li>
+        <li ng-class="{active: $route.current.activetab == 'contact'}">
+          <a ng-href="#contact">Nous contacter</a>
+        </li>
+        <li ng-class="{active: $route.current.activetab == 'links'}">
+          <a ng-href="#links">Liens</a>
+        </li>
       </ul>
 
     </div>
