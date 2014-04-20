@@ -1,16 +1,15 @@
-<nav class="navbar navbar-default" role="navigation">
-  <div class="container-fluid">
+<nav class="sidebar-nav">
+  <div class="navbar navbar-default" role="navigation">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">Krearts</a>
+      <span class="visible-xs navbar-brand">Sidebar menu</span>
     </div>
-
-    <div class="collapse navbar-collapse" id="navbar-collapse-1">
+    <div class="navbar-collapse collapse sidebar-navbar-collapse">
       <ul class="nav navbar-nav">
         <li ng-class="{active: $route.current.activetab == 'home'}">
           <a ng-href="#"><span class="glyphicon glyphicon-home"></span></a>
@@ -31,7 +30,6 @@
           <a ng-href="#links">Liens</a>
         </li>
       </ul>
-
-    </div>
+    </div><!--/.nav-collapse -->
   </div>
 </nav>
