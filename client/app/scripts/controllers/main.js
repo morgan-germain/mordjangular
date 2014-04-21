@@ -24,7 +24,7 @@ mainModule.controller('mainCtrl', ['$rootScope', '$route', 'AudioService',
   //bind AudioService to scope
   $scope.player = AudioService;
   //Load the song, every event, class method and Instance attribute from audio5js are accessible from the template
-  $scope.player.load('http://danosongs.com/music/danosongs.com-orb-of-envisage.mp3');
+  $scope.player.load('http://krearts.fr/audio/noizz6.mp3');
 
   $scope.isPlaying = false;
 
