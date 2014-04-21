@@ -15,6 +15,9 @@ footer {
  * Vertical nav (sidebar)
  */
 @media (min-width: 768px) {
+  .sidebar-nav {
+    position: absolute;
+  }
   .sidebar-nav .navbar .navbar-collapse {
     padding: 0;
     max-height: none;
@@ -43,16 +46,21 @@ footer {
     background-color: rgba(128, 128, 128,  0.3);
   }
 
+  // Menu bar should be blacky
   .navbar-default {
     background-color: black;
     border-color: black;
   }
 
-  .krearts-menu {
-    float: left;
-  }
   .krearts-falling-top {
     padding-top: 30px;
+  }
+
+  /**
+   * Content page
+   */
+  .krearts-content {
+    padding-left: 148px;
   }
 }
 
