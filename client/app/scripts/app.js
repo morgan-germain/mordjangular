@@ -44,8 +44,8 @@ app.config(['$routeProvider', function ($routeProvider) {
       activetab: 'services'
     })
 
-    .when('/artists/diffos', {
-      templateUrl: 'views/artists-diffos.html',
+    .when('/artists/daffos', {
+      templateUrl: 'views/artists-daffos.html',
       controller: 'mainCtrl',
       activetab: 'artists'
     })
