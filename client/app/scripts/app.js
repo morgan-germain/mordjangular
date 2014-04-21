@@ -43,6 +43,13 @@ app.config(['$routeProvider', function ($routeProvider) {
       controller: 'mainCtrl',
       activetab: 'services'
     })
+
+    .when('/artists/diffos', {
+      templateUrl: 'views/artists-diffos.html',
+      controller: 'mainCtrl',
+      activetab: 'artists'
+    })
+
     .otherwise({
       redirectTo: '/'
     });
