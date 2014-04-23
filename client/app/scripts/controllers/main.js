@@ -32,5 +32,11 @@ mainModule.controller('mainCtrl', ['$rootScope', '$route',
     {title: 'Trk8-burnsucker', url: 'http://krearts.fr/audio/eraserhead/Trk8-burnsucker.mp3'},
   ];
 
+  $scope.toxicazsid = [
+    {title: 'Toxicazsid-BelowMyBunker', url: 'http://krearts.fr/audio/toxicazsid/Toxicazsid-BelowMyBunker.mp3'},
+    {title: 'Toxicazsid-FollowingCold', url: 'http://krearts.fr/audio/toxicazsid/Toxicazsid-FollowingCold.mp3'},
+    {title: 'Toxicazsid-Mescaline', url: 'http://krearts.fr/audio/toxicazsid/Toxicazsid-Mescaline.mp3'},
+  ];
+
 
 }]);

@@ -64,6 +64,11 @@ app.config(['$routeProvider', function ($routeProvider) {
       controller: 'mainCtrl',
       activetab: 'artists'
     })
+    .when('/artists/toxicazsid', {
+      templateUrl: 'views/artists-toxicazsid.html',
+      controller: 'mainCtrl',
+      activetab: 'artists'
+    })
 
 
     .otherwise({
