@@ -44,16 +44,27 @@ app.config(['$routeProvider', function ($routeProvider) {
       activetab: 'services'
     })
 
-    .when('/artists/daffos', {
-      templateUrl: 'views/artists-daffos.html',
-      controller: 'mainCtrl',
-      activetab: 'artists'
-    })
     .when('/artists/arcaide', {
       templateUrl: 'views/artists-arcaide.html',
       controller: 'mainCtrl',
       activetab: 'artists'
     })
+    .when('/artists/jet-set-willy', {
+      templateUrl: 'views/artists-jet-set-willy.html',
+      controller: 'mainCtrl',
+      activetab: 'artists'
+    })
+    .when('/artists/daffos', {
+      templateUrl: 'views/artists-daffos.html',
+      controller: 'mainCtrl',
+      activetab: 'artists'
+    })
+    .when('/artists/eraserhead', {
+      templateUrl: 'views/artists-eraserhead.html',
+      controller: 'mainCtrl',
+      activetab: 'artists'
+    })
+
 
     .otherwise({
       redirectTo: '/'
