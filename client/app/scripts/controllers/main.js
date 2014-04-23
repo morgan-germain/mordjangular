@@ -7,12 +7,35 @@ mainModule.controller('mainCtrl', ['$rootScope', '$route', 'AudioService',
   // Keep route scope to obtain active tab
   $scope.$route = $route;
 
+
+  $scope.playlist = [
+    {title: 'noizz6', url: 'http://krearts.fr/audio/noizz6.mp3'},
+    {title: '1', url: 'http://krearts.fr/audio/1.mp3'},
+  ];
+
+
+  $scope.currentTrack = undefined;
+  $scope.isPlaying = false;
+
+  $scope.selectTrack = function(track) {
+    if ($scope.currentTrack === track) {
+      $scope.currentTrack = undefined;
+    } else {
+      $scope.currentTrack = track;
+      $scope.player.pause();
+      $scope.player.load(track.url);
+    }
+    console.log('Changed selection to ' + $scope.currentTrack.url);
+  };
+
+  $scope.playPause = function() {
+    $scope.isPlaying = !$scope.player.playing;
+    $scope.player.playPause();
+  };
+
+
   //bind AudioService to scope
   $scope.player = AudioService;
-  //Load the song, every event, class method and Instance attribute from audio5js are accessible from the template
-  $scope.player.load('http://krearts.fr/audio/noizz6.mp3');
-
-
   //example of event binding
   $scope.player.on('timeupdate',function(){
     $scope.$apply();

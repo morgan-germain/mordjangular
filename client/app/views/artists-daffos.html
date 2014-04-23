@@ -11,20 +11,30 @@
   <h3>Actualité</h3>
   <p>Quelques dates à venir, des prochains morceaux à balancer, les CD disponibles depuis quand, ...</p>
 
-<hr/>
-<!--Sending commands to audio5js-->
-<button class="btn btn-danger" ng-click="player.playPause()">
-  <div ng-switch on="player.playing">
-    <div ng-switch-when="true">
-      <span class="glyphicon glyphicon-pause"></span>
-    </div>
-    <div ng-switch-default>
-      <span class="glyphicon glyphicon-play"></span>
-    </div>
-  </div>
-</button>
-<!--Variables example-->
-<span>Position {{player.position}}</span>
-<span>Duration {{player.duration}}</span>
+  <hr/>
 
+  <p>
+    <button class="btn btn-danger"  ng-class="{disabled: !currentTrack}"
+        ng-click="playPause()">
+      <div ng-switch on="isPlaying">
+        <div ng-switch-when="true">
+          <span class="glyphicon glyphicon-pause"></span>
+        </div>
+        <div ng-switch-default>
+          <span class="glyphicon glyphicon-play"></span>
+        </div>
+      </div>
+    </button>
+    ({{player.position}} / {{player.duration}})
+  </p>
+  <table class="table table-hover">
+    <thead><tr><td>Track name</td></tr></thead>
+    <tbody>
+      <tr ng-repeat='track in playlist'>
+        <td ng-class="{active: track == currentTrack}" ng-click="selectTrack(track)">
+          Name : {{track.title}}
+        </td>
+      </tr>
+    </tbody>
+  </table>
 </div>
