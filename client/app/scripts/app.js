@@ -49,6 +49,11 @@ app.config(['$routeProvider', function ($routeProvider) {
       controller: 'mainCtrl',
       activetab: 'artists'
     })
+    .when('/artists/arcaide', {
+      templateUrl: 'views/artists-arcaide.html',
+      controller: 'mainCtrl',
+      activetab: 'artists'
+    })
 
     .otherwise({
       redirectTo: '/'

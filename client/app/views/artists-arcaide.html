@@ -1,0 +1,30 @@
+<div class="container">
+  <p>&nbsp;</p>
+
+  <h2>Arcaïde</h2>
+
+  <hr/>
+  <p>Groupe de machin truc qui fait du bruit. Du bling, du blong.</p>
+
+  <h3>Historique</h3>
+  <p>Historique bref du groupe</p>
+  <h3>Actualité</h3>
+  <p>Quelques dates à venir, des prochains morceaux à balancer, les CD disponibles depuis quand, ...</p>
+
+<hr/>
+<!--Sending commands to audio5js-->
+<button class="btn btn-danger" ng-click="onPlayPause()">
+  <div ng-switch on="isPlaying">
+    <div ng-switch-when="true">
+      <span class="glyphicon glyphicon-pause"></span>
+    </div>
+    <div ng-switch-default>
+      <span class="glyphicon glyphicon-play"></span>
+    </div>
+  </div>
+</button>
+<!--Variables example-->
+<span>Position {{player.position}}</span>
+<span>Duration {{player.duration}}</span>
+
+</div>
