@@ -19,8 +19,10 @@ mainModule.controller('mainCtrl', ['$rootScope', '$route',
   ];
 
   $scope.daffos = [
-    {title: 'noizz6', url: 'http://krearts.fr/audio/noizz6.mp3'},
-    {title: '1', url: 'http://krearts.fr/audio/1.mp3'},
+    {title: 'blade3-2', url: 'http://krearts.fr/audio/daffos/blade3-2.mp3'},
+    {title: '[WAV] dafos', url: 'http://krearts.fr/audio/daffos/dafos.mp3'},
+    {title: 'klinik-voix', url: 'http://krearts.fr/audio/daffos/klinik-voix.mp3'},
+    {title: 'noizz6', url: 'http://krearts.fr/audio/daffos/noizz6.mp3'},
   ];
 
   $scope.eraserhead = [
