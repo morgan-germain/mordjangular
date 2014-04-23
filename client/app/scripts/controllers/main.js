@@ -13,7 +13,9 @@ mainModule.controller('mainCtrl', ['$rootScope', '$route',
   ];
 
   $scope.jetsetwilly = [
-    {title: '1', url: 'http://krearts.fr/audio/1.mp3'},
+    {title: '1', url: 'http://krearts.fr/audio/jet-set-willy/1.mp3'},
+    {title: '[WAV] bowiewilie-2', url: 'http://krearts.fr/audio/jet-set-willy/bowiewilie-2.wav'},
+    {title: '[WAV] metalvoix', url: 'http://krearts.fr/audio/jet-set-willy/metalvoix.wav'},
   ];
 
   $scope.daffos = [

@@ -8,7 +8,8 @@ mainModule.factory('AudioService', function () {
   var params = {
     swf_path:'../../swf/audio5js.swf',
     throw_errors:true,
-    format_time:true
+    format_time:true,
+    codecs: ['mp4', 'wav', 'mp3'],
   };
 
   var audio5js = new Audio5js(params);
