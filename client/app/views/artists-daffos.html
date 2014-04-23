@@ -13,8 +13,8 @@
 
 <hr/>
 <!--Sending commands to audio5js-->
-<button class="btn btn-danger" ng-click="onPlayPause()">
-  <div ng-switch on="isPlaying">
+<button class="btn btn-danger" ng-click="player.playPause()">
+  <div ng-switch on="player.playing">
     <div ng-switch-when="true">
       <span class="glyphicon glyphicon-pause"></span>
     </div>

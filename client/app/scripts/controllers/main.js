@@ -12,16 +12,10 @@ mainModule.controller('mainCtrl', ['$rootScope', '$route', 'AudioService',
   //Load the song, every event, class method and Instance attribute from audio5js are accessible from the template
   $scope.player.load('http://krearts.fr/audio/noizz6.mp3');
 
-  $scope.isPlaying = false;
 
   //example of event binding
   $scope.player.on('timeupdate',function(){
     $scope.$apply();
   });
-
-  $scope.onPlayPause = function() {
-    $scope.player.playPause();
-    $scope.isPlaying = ! $scope.isPlaying;
-  };
 
 }]);
