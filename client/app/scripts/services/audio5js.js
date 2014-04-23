@@ -54,7 +54,6 @@ mainModule.directive('playlist', ['PlayerService', function(PlayerService) {
     },
     templateUrl: 'views/subviews/playlist.html',
     controller: function($scope) {
-
       $scope.playerService = PlayerService;
 
       // Update timestamps on view
