@@ -8,17 +8,9 @@ mainModule.controller('mainCtrl', ['$rootScope', '$route', 'PlayerService',
   $scope.$route = $route;
 
 
-  $scope.playlist = [
+  $scope.daffos = [
     {title: 'noizz6', url: 'http://krearts.fr/audio/noizz6.mp3'},
     {title: '1', url: 'http://krearts.fr/audio/1.mp3'},
   ];
-
-
-  $scope.playerService = PlayerService;
-
-  // Update timestamps on view
-  $scope.playerService.player.on('timeupdate',function(){
-    $scope.$apply();
-  });
 
 }]);

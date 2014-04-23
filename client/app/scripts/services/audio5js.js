@@ -49,6 +49,18 @@ mainModule.directive('playlist', ['PlayerService', function(PlayerService) {
 
   return {
     restrict: 'E',
-    templateUrl: 'views/subviews/playlist.html'
+    scope: {
+      playlist: '=artist'
+    },
+    templateUrl: 'views/subviews/playlist.html',
+    controller: function($scope) {
+
+      $scope.playerService = PlayerService;
+
+      // Update timestamps on view
+      $scope.playerService.player.on('timeupdate',function(){
+        $scope.$apply();
+      });
+    }
   };
 }]);
