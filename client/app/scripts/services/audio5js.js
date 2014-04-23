@@ -15,3 +15,32 @@ mainModule.factory('AudioService', function () {
 
   return audio5js;
 });
+
+mainModule.factory('PlayerService', ['AudioService', function(AudioService) {
+  var factory = {
+    currentTrack: undefined,
+    isPlaying: false
+  };
+
+  factory.selectTrack = function(track) {
+    if (factory.currentTrack === track) {
+      factory.currentTrack = undefined;
+    } else {
+      factory.currentTrack = track;
+      factory.player.pause();
+      factory.isPlaying = false;
+      factory.player.load(track.url);
+    }
+    console.log('Changed selection to ' + factory.currentTrack.url);
+  };
+
+  factory.playPause = function() {
+    factory.isPlaying = !factory.player.playing;
+    factory.player.playPause();
+  };
+
+  //bind AudioService to this factory
+  factory.player = AudioService;
+
+  return factory;
+}]);

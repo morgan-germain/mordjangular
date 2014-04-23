@@ -2,8 +2,8 @@
 
 var mainModule = angular.module('mainModule', []);
 
-mainModule.controller('mainCtrl', ['$rootScope', '$route', 'AudioService',
-      function ($scope, $route, AudioService) {
+mainModule.controller('mainCtrl', ['$rootScope', '$route', 'PlayerService',
+      function ($scope, $route, PlayerService) {
   // Keep route scope to obtain active tab
   $scope.$route = $route;
 
@@ -14,30 +14,10 @@ mainModule.controller('mainCtrl', ['$rootScope', '$route', 'AudioService',
   ];
 
 
-  $scope.currentTrack = undefined;
-  $scope.isPlaying = false;
+  $scope.playerService = PlayerService;
 
-  $scope.selectTrack = function(track) {
-    if ($scope.currentTrack === track) {
-      $scope.currentTrack = undefined;
-    } else {
-      $scope.currentTrack = track;
-      $scope.player.pause();
-      $scope.player.load(track.url);
-    }
-    console.log('Changed selection to ' + $scope.currentTrack.url);
-  };
-
-  $scope.playPause = function() {
-    $scope.isPlaying = !$scope.player.playing;
-    $scope.player.playPause();
-  };
-
-
-  //bind AudioService to scope
-  $scope.player = AudioService;
-  //example of event binding
-  $scope.player.on('timeupdate',function(){
+  // Update timestamps on view
+  $scope.playerService.player.on('timeupdate',function(){
     $scope.$apply();
   });
 

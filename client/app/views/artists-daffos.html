@@ -14,9 +14,9 @@
   <hr/>
 
   <p>
-    <button class="btn btn-danger"  ng-class="{disabled: !currentTrack}"
-        ng-click="playPause()">
-      <div ng-switch on="isPlaying">
+    <button class="btn btn-danger"  ng-class="{disabled: !playerService.currentTrack}"
+        ng-click="playerService.playPause()">
+      <div ng-switch on="playerService.isPlaying">
         <div ng-switch-when="true">
           <span class="glyphicon glyphicon-pause"></span>
         </div>
@@ -25,13 +25,14 @@
         </div>
       </div>
     </button>
-    ({{player.position}} / {{player.duration}})
+    ({{playerService.player.position}} / {{playerService.player.duration}})
   </p>
   <table class="table table-hover">
     <thead><tr><td>Track name</td></tr></thead>
     <tbody>
       <tr ng-repeat='track in playlist'>
-        <td ng-class="{active: track == currentTrack}" ng-click="selectTrack(track)">
+        <td ng-class="{active: track == playerService.currentTrack}"
+            ng-click="playerService.selectTrack(track)">
           Name : {{track.title}}
         </td>
       </tr>
