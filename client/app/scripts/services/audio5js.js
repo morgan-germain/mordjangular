@@ -44,3 +44,11 @@ mainModule.factory('PlayerService', ['AudioService', function(AudioService) {
 
   return factory;
 }]);
+
+mainModule.directive('playlist', ['PlayerService', function(PlayerService) {
+
+  return {
+    restrict: 'E',
+    templateUrl: 'views/subviews/playlist.html'
+  };
+}]);

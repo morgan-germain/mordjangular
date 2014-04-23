@@ -1,0 +1,25 @@
+ <p>
+  <button class="btn btn-danger"  ng-class="{disabled: !playerService.currentTrack}"
+      ng-click="playerService.playPause()">
+    <div ng-switch on="playerService.isPlaying">
+      <div ng-switch-when="true">
+        <span class="glyphicon glyphicon-pause"></span>
+      </div>
+      <div ng-switch-default>
+        <span class="glyphicon glyphicon-play"></span>
+      </div>
+    </div>
+  </button>
+  ({{playerService.player.position}} / {{playerService.player.duration}})
+</p>
+<table class="table table-hover">
+  <thead><tr><td>Track name</td></tr></thead>
+  <tbody>
+    <tr ng-repeat='track in playlist'>
+      <td ng-class="{active: track == playerService.currentTrack}"
+          ng-click="playerService.selectTrack(track)">
+        Name : {{track.title}}
+      </td>
+    </tr>
+  </tbody>
+</table>
