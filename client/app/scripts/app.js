@@ -54,7 +54,7 @@ app.config(['$routeProvider', function ($routeProvider) {
       controller: 'mainCtrl',
       activetab: 'artists'
     })
-    .when('/artists/diffos', {
+    .when('/artists/difoss', {
       templateUrl: 'views/artists-difoss.html',
       controller: 'mainCtrl',
       activetab: 'artists'
