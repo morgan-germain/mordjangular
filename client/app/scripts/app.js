@@ -54,13 +54,13 @@ app.config(['$routeProvider', function ($routeProvider) {
       controller: 'mainCtrl',
       activetab: 'artists'
     })
-    .when('/artists/daffos', {
-      templateUrl: 'views/artists-daffos.html',
+    .when('/artists/diffos', {
+      templateUrl: 'views/artists-difoss.html',
       controller: 'mainCtrl',
       activetab: 'artists'
     })
-    .when('/artists/eraserhead', {
-      templateUrl: 'views/artists-eraserhead.html',
+    .when('/artists/razor-head', {
+      templateUrl: 'views/artists-razor-head.html',
       controller: 'mainCtrl',
       activetab: 'artists'
     })
