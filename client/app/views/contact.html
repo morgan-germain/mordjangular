@@ -1,7 +1,38 @@
 <div class="container">
   <p>&nbsp;</p>
-  <div class="jumbotron">
-    <h1>Nous contacter</h1>
-    <p class="lead"><a href='mailto:TODO-CREER-EMAIL@krearts.fr'>TODO-CREER-EMAIL@krearts.fr</a></p>
+ 
+  <div class="row">
+    <div class="col-md-8 col-md-offset-1">
+       <div class="jumbotron">
+        <h1>Nous contacter</h1>
+        <form role="form" ng-controller='contactCtrl' ng-submit="sendMessageFromContactForm()">
+          <div class="form-group">
+            <label for="email">Adresse email</label>
+            <input type="email" class="form-control"
+                   id="email" placeholder="Enter email" required
+                   ng-model="email">
+          </div>
+          <div class="form-group">
+            <label for="content">Contenu</label>
+            <textarea class="form-control" rows="3" id="content" required
+                      ng-model="content"></textarea>
+          </div>
+          <button ng-class='{disabled: hideButton}' type="submit" class="btn btn-default">Envoyer</button>
+        </form>
+
+        <p>&nbsp;</p>
+        <div ng-show="messageSent" class="alert alert-success">
+          <strong>Votre message a été envoyé.</strong><br/>
+          Krearts essaie de vous répondre rapidement.
+        </div>
+
+        <div ng-show="messageError" class="alert alert-danger">
+          <strong>Le message n'a pas pu être envoyé.</strong><br/>
+          Un problème technique a empêché l'envoie du message.
+          Veuillez ressayer ultérieurement.
+        </div>
+      </div>
+    </div>
   </div>
+
 </div>
