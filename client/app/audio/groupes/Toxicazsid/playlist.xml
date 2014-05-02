@@ -1,0 +1,23 @@
+﻿
+
+<playlist version="1" xmlns="http://xspf.org/ns/0/">
+<trackList>
+
+<track>
+<title>Below My Bunker</title>
+<location>http://krearts.fr/audio/groupes/Toxicazsid/Toxicazsid-BelowMyBunker.mp3</location>		
+</track>
+
+<track>
+<title>Following Cold</title>
+<location>http://krearts.fr/audio/groupes/Toxicazsid/Toxicazsid-FollowingCold.mp3</location>		
+</track>
+
+<track>
+<title>Mescaline</title>
+<location>http://krearts.fr/audio/groupes/Toxicazsid/Toxicazsid-Mescaline.mp3</location>		
+</track> 
+
+	
+</trackList>
+</playlist>
