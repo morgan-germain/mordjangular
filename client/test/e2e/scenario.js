@@ -13,9 +13,5 @@ describe('E2E Tests: Rooting through pages', function() {
     it('should display the correct home page', function() {
       expect(browser().location().path()).toBe('/');
     });
-
-    it('should there a list of awesomeThings shown', function() {
-      expect(repeater('div.awesomeThing').count()).toBe(3);
-    });
   });
 });

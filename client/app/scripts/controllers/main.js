@@ -15,7 +15,7 @@ mainModule.controller('mainCtrl', ['$rootScope', '$route',
 
 }]);
 
-mainModule.controller('contactCtrl', ['$scope', '$http', '$log', function ($scope, $http, $log) {
+mainModule.controller('contactCtrl', ['$scope', '$http', function ($scope, $http) {
   $scope.email = '';
   $scope.content = '';
   $scope.hideButton = false;
@@ -29,7 +29,7 @@ mainModule.controller('contactCtrl', ['$scope', '$http', '$log', function ($scop
     success(function() {
       $scope.showSuccess();
     }).
-    error(function(data, status, headers, config) {
+    error(function() {
       $scope.showError();
     });
 

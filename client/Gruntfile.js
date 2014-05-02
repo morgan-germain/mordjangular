@@ -22,8 +22,7 @@ module.exports = function (grunt) {
     yeoman: {
       // configurable paths
       app: require('./bower.json').appPath || 'app',
-      // dist: 'dist',
-      dist: '../server/mordjangular/static/front'
+      dist: 'dist'
     },
 
     // Compiles LESS files to CSS
