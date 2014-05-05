@@ -25,20 +25,19 @@ mainModule.controller('contactCtrl', ['$scope', '$http', function ($scope, $http
   $scope.sendMessageFromContactForm = function() {
     $scope.hideButton = true;
 
-    $http({method: 'POST', url: 'http://krearts.fr/contact-form.php'}).
-    success(function() {
-      $scope.showSuccess();
-    }).
-    error(function() {
-      $scope.showError();
-    });
-
-    $scope.showError = function() {
-      $scope.messageError = true;
+    var myData = {
+      'email': $scope.email,
+      'content': $scope.content
     };
-
-    $scope.showSuccess = function() {
+    //$http.post({method: 'POST', url: 'http://krearts.fr/contact-form.php'})
+    $http.post('http://krearts.fr/contact-form.php', myData)
+    .success(function() {
       $scope.messageSent = true;
-    };
+      $scope.hideButton = true;
+    })
+    .error(function() {
+      $scope.messageError = true;
+      $scope.hideButton = true;
+    });
   };
 }]);
