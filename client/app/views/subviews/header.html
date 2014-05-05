@@ -14,16 +14,16 @@
     <div class="navbar-collapse collapse sidebar-navbar-collapse">
       <ul class="nav navbar-nav">
         <li ng-class="{active: $route.current.activetab == 'home'}">
-          <a ng-href="#"><span class="glyphicon glyphicon-home"></span></a>
+          <a ng-href="#"><h4><span class="glyphicon glyphicon-home"></span></h4></a>
+        </li>
+        <li ng-class="{active: $route.current.activetab == 'artists'}" class="bold">
+          <a ng-href="#artists"><h4>Artistes</h4></a>
         </li>
         <li ng-class="{active: $route.current.activetab == 'services'}">
           <a ng-href="#services">Nos services</a>
         </li>
         <li ng-class="{active: $route.current.activetab == 'about'}">
           <a ng-href="#about">A propos</a>
-        </li>
-        <li ng-class="{active: $route.current.activetab == 'artists'}">
-          <a ng-href="#artists">Artistes</a>
         </li>
         <li ng-class="{active: $route.current.activetab == 'contact'}">
           <a ng-href="#contact">Nous contacter</a>
