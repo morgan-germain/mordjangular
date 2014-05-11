@@ -2,8 +2,9 @@
  * Whole page configuration
  */
 body {
-  background-color: black;
+  background-image: url(../images/theme/krearts-background.png);
 }
+
 
 footer {
   background-color: #f8f8f8;
@@ -12,128 +13,71 @@ footer {
 
 
 /**
- * Vertical nav (sidebar)
+ * Navigation bar
  */
-@media (min-width: 768px) {
-  .sidebar-nav {
-    position: absolute;
-    margin-top: 6px;
-  }
-  .sidebar-nav .navbar .navbar-collapse {
-    padding: 0;
-    max-height: none;
-    width: 146px;
-    height: 100%;
-  }
-  .sidebar-nav .navbar ul {
-    float: none;
-    display: block;
-  }
-  .sidebar-nav .navbar li {
-    float: none;
-    display: block;
-    background: url(../images/krearts-fallin-line.png);
+.krearts-logos {
+  background-image: url(../images/theme/krearts-logo-background.png);
+  background-repeat: no-repeat;
+
+  .krearts-logo {
+    padding-left: 40px;
   }
 
-  .sidebar-nav .navbar li a {
-    padding-top: 12px;
-    padding-bottom: 12px;
-    background-color: transparent;
-  }
-
-  .sidebar-nav .navbar li.active a {
-    background-color: rgba(96, 96, 96,  0.3);
-  }
-  .sidebar-nav .navbar li.active a:hover {
-    background-color: rgba(128, 128, 128,  0.3);
-  }
-
-  // Menu bar should be blacky
-  .navbar-default {
-    background-color: black;
-    border-color: black;
-  }
-
-  .navbar {
-    border-top-width: 0px;
-  }
-
-  .krearts-falling-top {
+  .krearts-title {
     padding-top: 30px;
   }
+}
 
-  /**
-   * Content page
-   */
-  .krearts-content {
-    padding-left: 148px;
+.navbar.navbar-default {
+  margin-bottom: 0px;
+  min-height: 29px;
+  border-radius: 0px;
+  border: none;
+
+  background-image: url(../images/theme/krearts-navbar-slashes.png);
+  background-repeat: no-repeat;
+  background-color: rgba(0,0,0,0);
+}
+
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover {
+  background-color: rgba(0,0,0, 0.45);
+}
+
+.krearts-menu {
+
+  .krearts-link {
+    padding: 4px;
+  }
+
+  ul {
+    padding-left: 325px;
   }
 }
+
 
 
 /**
  * Home page configuration
  */
 
-.intro-message {
-  position: relative;
-  padding-top: 10%;
-
-  text-align: center;
-
-  .intro-divider {
-    width: 400px;
-    border-top: 1px solid #f8f8f8;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-  }
-
-  > h1 {
-    margin: 0;
-    font-size: 5em;
-    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
-  }
-
-  > h3 {
-    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
-  }
+.krearts-content {
+  color: #e0e0e0;
 }
 
+
+/**
+ * Jumbotron in contact form
+ */
 .jumbotron {
   background-color: #181818;
   color: #e0e0e0;
 }
 
-.table-hover > tbody > tr {
-  > td:hover {
-    background-color: #202020;
-  }
 
-  > td.active {
-    background-color: #404040;
-  }
-
-  > td.active:hover {
-    background-color: #606060;
-  }
-}
-
-.krearts-header {
-  color: white;
-}
-
-.krearts-logo-fallin {
-  margin-left: 20px;
-  float: left;
-}
-
-.krearts-content {
-  color: #e0e0e0;
-}
-
-.krearts-news {
-
-}
-
+/**
+ * Thumbnails for photo galleries
+ */
 .thumb {
   margin-bottom: 30px;
 }
