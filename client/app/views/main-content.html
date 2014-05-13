@@ -1,7 +1,18 @@
 <div ng-include="'views/subviews/header.html'"></div>
 
-<div class="krearts-content">
-  <div ng-view></div>
+<div class="krearts-content container-fluid">
+  <div class="row">
+    <div class="col-md-10 col-xs-12">
+      <div class="krearts-dark-pane">
+        <div ng-view></div>
+      </div>
+    </div>
+    <div class="col-md-2 hidden-xs">
+      <div class="krearts-right-pane">
+        <img src="images/theme/krearts-right-pane.png" />
+      </div>
+    </div>
+  </div>
 </div>
 
 <div ng-include="'views/subviews/footer.html'"></div>
