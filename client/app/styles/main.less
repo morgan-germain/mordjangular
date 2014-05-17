@@ -61,17 +61,30 @@ footer {
   background-color: rgba(0,0,0, 0.45);
 }
 
-.krearts-menu {
-
-  .krearts-link {
-    padding: 4px;
-  }
-
-  ul {
-    padding-left: 325px;
+// Tablets navbar
+@media only screen and (max-device-width: 1024px) {
+  .krearts-menu {
+    .krearts-link {
+      padding: 4px;
+    }
+    ul {
+      padding-left: 0px;
+    }
   }
 }
 
+// Desktop navbars
+@media only screen and (min-device-width: 1024px) {
+  .krearts-menu {
+    .krearts-link {
+      padding: 4px;
+    }
+
+    ul {
+      padding-left: 325px;
+    }
+  }
+}
 
 
 /**

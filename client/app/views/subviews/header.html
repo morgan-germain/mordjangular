@@ -12,12 +12,14 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <span class="visible-xs navbar-brand">
+      <span class="visible-xs visible-sm navbar-brand">
         Krearts
       </span>
     </div>
     <div class="navbar-collapse collapse krearts-menu">
-      <img class="krearts-slashes-left hidden-xs" src="images/theme/krearts-navbar-slashes-left.png" />
+      <div class="hidden-xs hidden-sm">
+        <img class="krearts-slashes-left" src="images/theme/krearts-navbar-slashes-left.png" />
+      </div>
       <ul class="nav navbar-nav">
         <li ng-class="{active: $route.current.activetab == 'home'}">
           <a class="krearts-link" ng-href="#">
@@ -50,7 +52,7 @@
           </a>
         </li>
       </ul>
-      <img  class="krearts-slashes-right hidden-xs" src="images/theme/krearts-navbar-slashes-right.png" />
+      <img  class="krearts-slashes-right hidden-xs hidden-sm" src="images/theme/krearts-navbar-slashes-right.png" />
     </div><!--/.nav-collapse -->
   </div>
 </nav>
