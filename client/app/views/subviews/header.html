@@ -17,6 +17,7 @@
       </span>
     </div>
     <div class="navbar-collapse collapse krearts-menu">
+      <img class="krearts-slashes-left hidden-xs" src="images/theme/krearts-navbar-slashes-left.png" />
       <ul class="nav navbar-nav">
         <li ng-class="{active: $route.current.activetab == 'home'}">
           <a class="krearts-link" ng-href="#">
@@ -28,11 +29,6 @@
             <img src="images/theme/krearts-menu-artists.png" alt="artists"/>
           </a>
         </li>
-        <li ng-class="{active: $route.current.activetab == 'services'}">
-          <a class="krearts-link" ng-href="#services">
-            <img src="images/theme/krearts-menu-services.png" alt="services"/>
-          </a>
-        </li>
         <li ng-class="{active: $route.current.activetab == 'about'}">
           <a class="krearts-link" ng-href="#about">
             <img src="images/theme/krearts-menu-about.png" alt="about"/>
@@ -40,10 +36,7 @@
         </li>
         <li ng-class="{active: $route.current.activetab == 'contact'}">
           <a class="krearts-link" ng-href="#contact">
-            contact
-            <!--
             <img src="images/theme/krearts-menu-contact.png" alt="contact"/>
-            -->
           </a>
         </li>
         <li ng-class="{active: $route.current.activetab == 'links'}">
@@ -51,7 +44,13 @@
             <img src="images/theme/krearts-menu-links.png" alt="links"/>
           </a>
         </li>
+        <li ng-class="{active: $route.current.activetab == 'partners'}">
+          <a class="krearts-link" ng-href="#partners">
+            <img src="images/theme/krearts-menu-partners.png" alt="partners"/>
+          </a>
+        </li>
       </ul>
+      <img  class="krearts-slashes-right hidden-xs" src="images/theme/krearts-navbar-slashes-right.png" />
     </div><!--/.nav-collapse -->
   </div>
 </nav>

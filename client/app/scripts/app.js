@@ -38,10 +38,10 @@ app.config(['$routeProvider', function ($routeProvider) {
       controller: 'mainCtrl',
       activetab: 'links'
     })
-    .when('/services', {
-      templateUrl: 'views/services.html',
+    .when('/partners', {
+      templateUrl: 'views/partners.html',
       controller: 'mainCtrl',
-      activetab: 'services'
+      activetab: 'partners'
     })
 
     .when('/artists/arcaide', {
