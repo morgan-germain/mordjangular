@@ -69,7 +69,11 @@ app.config(['$routeProvider', function ($routeProvider) {
       controller: 'mainCtrl',
       activetab: 'artists'
     })
-
+    .when('/artists/fist-fucking-armageddon', {
+      templateUrl: 'views/artists-fist-fucking-armageddon.html',
+      controller: 'mainCtrl',
+      activetab: 'artists'
+    })
 
     .otherwise({
       redirectTo: '/'
