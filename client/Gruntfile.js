@@ -173,8 +173,27 @@ module.exports = function (grunt) {
         ignorePath: '<%= yeoman.app %>/'
       }
     },
+    'wiredep': {
 
+      target: {
 
+        // Point to the files that should be updated when
+        // you run `grunt wiredep`
+        src: [
+          '<%= yeoman.app %>/index.html'
+        ],
+
+        // Optional:
+        // ---------
+        cwd: '',
+        dependencies: true,
+        devDependencies: false,
+        exclude: [],
+        fileTypes: {},
+        ignorePath: '',
+        overrides: {}
+      }
+    },
 
     // Renames files for browser caching purposes
     rev: {
@@ -354,6 +373,7 @@ module.exports = function (grunt) {
 
   // Prepare LESS compilation
   grunt.loadNpmTasks('grunt-contrib-less');
+  grunt.loadNpmTasks('grunt-wiredep');
 
   grunt.registerTask('serve', function (target) {
     if (target === 'dist') {
@@ -362,7 +382,7 @@ module.exports = function (grunt) {
 
     grunt.task.run([
       'clean:server',
-      'bower-install',
+      'wiredep',
       'concurrent:server',
       'autoprefixer',
       'connect:livereload',
@@ -385,7 +405,7 @@ module.exports = function (grunt) {
 
   grunt.registerTask('build', [
     'clean:dist',
-    'bower-install',
+    'wiredep',
     'useminPrepare',
     'concurrent:dist',
     'autoprefixer',
