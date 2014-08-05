@@ -16,10 +16,13 @@ app.directive('jplayer', function() {
         var myPlaylist = new jPlayerPlaylist({
           jPlayer: "#jquery_jplayer_1",
           cssSelectorAncestor: "#jp_container_1"
-        }, tracks, {
-          swfPath: "/js",
-          supplied: "ogv, m4v, oga, mp3",
+        },
+        tracks, {
+          swfPath: "./bower_components/jplayer/jquery.jplayer",
+          supplied: "mp3",
+          wmode: "window",
           smoothPlayBar: true,
+          keyEnabled: true
         });
 
       });
