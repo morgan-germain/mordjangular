@@ -12,21 +12,9 @@
     <p>&nbsp;</p>
 
 
-    <p>/MGE</p>
-      <jplayer></jplayer>
-    <p>/MGE</p>
-
-
-    <object width="250" height="87" data="http://krearts.fr/audio/player-audio/mediaplayer.swf" type="application/x-shockwave-flash">
-      <param name="quality" value="high" />
-      <param name="bgcolor" value="#000000" />
-      <param name="allowFullScreen" value="false" />
-      <param name="swLiveConnect" value="false" />
-      <param name="allowScriptAccess" value="sameDomain" />
-      <param name="FlashVars"
-         value="file=http://krearts.fr/audio/groupes/Arcaide/playlist.xml&amp;width=250&amp;height=260&amp;displaywidth=470&amp;displayheight=0&amp;overstretch=false&amp;autostart=false&amp;showicons=false&amp;showfsbutton=false&amp;fullscreenmode=false&amp;thumbsinplaylist=false&amp;linktarget=_blank&amp;linkfromdisplay=true&amp;shuffle=false&amp;showeq=false" />
-      <param name="src" value="http://krearts.fr/audio/player-audio/mediaplayer.swf" />
-    </object>
+      <div ng-controller="ArcaideCtrl">
+        <jplayer tracks="tracks"></jplayer>
+      </div>
   </div>
   <div class="col-md-7">
     <!-- Chang URLs to wherever Video.js files will be hosted -->
