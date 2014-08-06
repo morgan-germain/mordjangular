@@ -17,8 +17,8 @@ app.directive('jplayer', function() {
         cssSelectorAncestor: "#jp_container_1"
       },
       scope.tracks, {
-        swfPath: "./bower_components/jplayer/jquery.jplayer",
-        supplied: "mp3",
+        swfPath: "/audio/jplayer",
+        supplied: "oga, mp3",
         wmode: "window",
         smoothPlayBar: true,
         keyEnabled: true
