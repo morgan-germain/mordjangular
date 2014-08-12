@@ -5,22 +5,19 @@ var mainModule = angular.module('mainModule');
 mainModule.controller('ToxicAzSidCtrl', ['$scope', function ($scope) {
 
   $scope.tracks = [{
-    artist: 'Dïfoss',
-    title: 'Blade',
-    mp3: 'http://krearts.fr/audio/groupes/Difoss/Blade.mp3',
-    oga: 'http://krearts.fr/audio/groupes/Difoss/Blade.ogg',
-    free: true
+    artist: 'Toxic Azsid',
+    title: 'Below My Bunker',
+    mp3: 'http://krearts.fr/audio/groupes/Toxicazsid/Toxicazsid-BelowMyBunker.mp3',
+    oga: 'http://krearts.fr/audio/groupes/Toxicazsid/Toxicazsid-BelowMyBunker.ogg',
   }, {
-    artist: 'Dïfoss',
-    title: 'Sarcastic Forms',
-    mp3: 'http://krearts.fr/audio/groupes/Difoss/SarcasticForms.mp3',
-    oga: 'http://krearts.fr/audio/groupes/Difoss/SarcasticForms.ogg',
-    free: true
+    artist: 'Toxic Azsid',
+    title: 'Following Cold',
+    mp3: 'http://krearts.fr/audio/groupes/Toxicazsid/Toxicazsid-FollowingCold.mp3',
+    oga: 'http://krearts.fr/audio/groupes/Toxicazsid/Toxicazsid-FollowingCold.ogg',
   }, {
-    artist: 'Dïfoss',
-    title: 'Sorrow',
-    mp3: 'http://krearts.fr/audio/groupes/Difoss/Sorrow.mp3',
-    oga: 'http://krearts.fr/audio/groupes/Difoss/Sorrow.ogg',
-    free: true
+    artist: 'Toxic Azsid',
+    title: 'Mescaline',
+    mp3: 'http://krearts.fr/audio/groupes/Toxicazsid/Toxicazsid-Mescaline.mp3',
+    oga: 'http://krearts.fr/audio/groupes/Toxicazsid/Toxicazsid-Mescaline.ogg',
   }];
 }]);

@@ -5,22 +5,19 @@ var mainModule = angular.module('mainModule');
 mainModule.controller('JetSetWillyCtrl', ['$scope', function ($scope) {
 
   $scope.tracks = [{
-    artist: 'Dïfoss',
-    title: 'Blade',
-    mp3: 'http://krearts.fr/audio/groupes/Difoss/Blade.mp3',
-    oga: 'http://krearts.fr/audio/groupes/Difoss/Blade.ogg',
-    free: true
+    artist: 'Jet Set Willy',
+    title: 'The Marked Brother',
+    mp3: 'http://krearts.fr/audio/groupes/jet-set-willy/The%20marked%20brother.mp3',
+    oga: 'http://krearts.fr/audio/groupes/jet-set-willy/The%20marked%20brother.ogg',
   }, {
-    artist: 'Dïfoss',
-    title: 'Sarcastic Forms',
-    mp3: 'http://krearts.fr/audio/groupes/Difoss/SarcasticForms.mp3',
-    oga: 'http://krearts.fr/audio/groupes/Difoss/SarcasticForms.ogg',
-    free: true
+    artist: 'Jet Set Willy',
+    title: 'Forged Iron',
+    mp3: 'http://krearts.fr/audio/groupes/jet-set-willy/forged%20iron.mp3',
+    oga: 'http://krearts.fr/audio/groupes/jet-set-willy/forged%20iron.ogg',
   }, {
-    artist: 'Dïfoss',
-    title: 'Sorrow',
-    mp3: 'http://krearts.fr/audio/groupes/Difoss/Sorrow.mp3',
-    oga: 'http://krearts.fr/audio/groupes/Difoss/Sorrow.ogg',
-    free: true
+    artist: 'Jet Set Willy',
+    title: 'Omit to Be',
+    mp3: 'http://krearts.fr/audio/groupes/jet-set-willy/omit%20to%20be.mp3',
+    oga: 'http://krearts.fr/audio/groupes/jet-set-willy/omit%20to%20be.ogg',
   }];
 }]);

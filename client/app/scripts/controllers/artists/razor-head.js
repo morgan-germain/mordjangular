@@ -5,22 +5,19 @@ var mainModule = angular.module('mainModule');
 mainModule.controller('RazorHeadCtrl', ['$scope', function ($scope) {
 
   $scope.tracks = [{
-    artist: 'Dïfoss',
-    title: 'Blade',
-    mp3: 'http://krearts.fr/audio/groupes/Difoss/Blade.mp3',
-    oga: 'http://krearts.fr/audio/groupes/Difoss/Blade.ogg',
-    free: true
+    artist: 'Razor Head',
+    title: 'Another Suicide',
+    mp3: 'http://krearts.fr/audio/groupes/RazorHead/AnotherSuicide.mp3',
+    oga: 'http://krearts.fr/audio/groupes/RazorHead/AnotherSuicide.ogg',
   }, {
-    artist: 'Dïfoss',
-    title: 'Sarcastic Forms',
-    mp3: 'http://krearts.fr/audio/groupes/Difoss/SarcasticForms.mp3',
-    oga: 'http://krearts.fr/audio/groupes/Difoss/SarcasticForms.ogg',
-    free: true
+    artist: 'Razor Head',
+    title: 'Break Illusion',
+    mp3: 'http://krearts.fr/audio/groupes/RazorHead/Break-Illusion.mp3',
+    oga: 'http://krearts.fr/audio/groupes/RazorHead/Break-Illusion.ogg',
   }, {
-    artist: 'Dïfoss',
-    title: 'Sorrow',
-    mp3: 'http://krearts.fr/audio/groupes/Difoss/Sorrow.mp3',
-    oga: 'http://krearts.fr/audio/groupes/Difoss/Sorrow.ogg',
-    free: true
+    artist: 'Razor Head',
+    title: 'Burn Sucker',
+    mp3: 'http://krearts.fr/audio/groupes/RazorHead/RZH-BurnSucker.mp3',
+    oga: 'http://krearts.fr/audio/groupes/RazorHead/RZH-BurnSucker.ogg',
   }];
 }]);
