@@ -8,20 +8,12 @@
         <img src="images/audio/groupes/Difoss/logo-difoss.png" height="200"/>
       </div>
 
-     <p>&nbsp;</p>
+      <p>&nbsp;</p>
 
-      <div class="text-center">
-        <object width="470" height="87" data="http://krearts.fr/audio/player-audio/mediaplayer.swf" type="application/x-shockwave-flash">
-          <param name="quality" value="high" />
-          <param name="bgcolor" value="#000000" />
-          <param name="allowFullScreen" value="false" />
-          <param name="swLiveConnect" value="false" />
-          <param name="allowScriptAccess" value="sameDomain" />
-          <param name="FlashVars"
-             value="file=http://krearts.fr/audio/groupes/Difoss/playlist.xml&amp;width=470&amp;height=260&amp;displaywidth=470&amp;displayheight=0&amp;overstretch=false&amp;autostart=false&amp;showicons=false&amp;showfsbutton=false&amp;fullscreenmode=false&amp;thumbsinplaylist=false&amp;linktarget=_blank&amp;linkfromdisplay=true&amp;shuffle=false&amp;showeq=false" />
-          <param name="src" value="http://krearts.fr/audio/player-audio/mediaplayer.swf" />
-        </object>
+      <div ng-controller="DifossCtrl">
+        <jplayer tracks="tracks"></jplayer>
       </div>
+
 
       <p>&nbsp;</p>
 
@@ -35,8 +27,6 @@
           <li>Lionel PINTER (chant, électronique, Mix et Mastering)</li>
         </ul>
       </p>
-
- 
 
     </div>
   </div>

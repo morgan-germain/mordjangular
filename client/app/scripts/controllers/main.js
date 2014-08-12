@@ -44,7 +44,6 @@ mainModule.controller('contactCtrl', ['$scope', '$http', function ($scope, $http
 
 
 mainModule.controller('carouselController', ['$scope', function($scope) {
-
   $scope.slideImages = [
     'images/audio/groupes/Arcaide/l.jpg',
     'images/audio/groupes/Arcaide/lc.jpg',

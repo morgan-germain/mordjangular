@@ -1,0 +1,138 @@
+/**
+ * Whole page configuration
+ */
+body {
+  background-image: url(../images/theme/krearts-background.png);
+}
+
+
+footer {
+  background-color: #f8f8f8;
+  padding: 50px 0;
+}
+
+.krearts-dark-pane {
+  //background-image: url(../images/theme/krearts-black-panel.png);
+  background-color: rgba(0,0,0, 0.7);
+  width:100%;
+  height:100%;
+  border-radius: 14px;
+}
+
+.krearts-right-pane {
+}
+
+/**
+ * Navigation bar
+ */
+.krearts-logos {
+  background-image: url(../images/theme/krearts-logo-background.png);
+  background-repeat: no-repeat;
+
+  .krearts-logo {
+    padding-left: 40px;
+  }
+
+  .krearts-title {
+    padding-top: 30px;
+  }
+}
+
+.navbar.navbar-default {
+  margin-bottom: 0px;
+  border-radius: 0px;
+  border: none;
+  background-color: rgba(0,0,0,0);
+}
+
+.krearts-slashes-left {
+  left:0px;
+  position: absolute;
+}
+
+.krearts-slashes-right {
+  left: 1080px;
+  position: absolute;
+}
+
+
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover {
+  background-color: rgba(0,0,0, 0.45);
+}
+
+// Tablets navbar
+@media only screen and (max-width: 992px) {
+  .krearts-menu {
+    .krearts-link {
+      padding: 4px 0px 4px;
+    }
+    ul {
+      padding-left: 0px;
+    }
+  }
+}
+
+// Desktop navbars
+@media only screen and (min-width: 992px) {
+  .krearts-menu {
+    .krearts-link {
+      padding: 4px 0px 4px;
+    }
+
+    ul {
+      padding-left: 325px;
+    }
+  }
+}
+
+
+/**
+ * Home page configuration
+ */
+
+.krearts-content {
+  color: #e0e0e0;
+}
+
+
+/**
+ * Jumbotron in contact form
+ */
+.jumbotron {
+  background-color: #181818;
+  color: #e0e0e0;
+}
+
+
+/**
+ * Thumbnails for photo galleries
+ */
+.thumb {
+  margin-bottom: 30px;
+}
+
+.thumbnail {
+  background-color: #0f0f0f;
+  border: none;
+  padding-top: 15px;
+  h3 { color: #dedede; }
+}
+
+
+/**
+ * Artists specific fonts
+ */
+@font-face {
+  font-family: "Modern Gothic";
+  src: url('gang_wolfik.ttf');
+}
+
+.krearts-arcaide-font {
+  font-family: "Modern Gothic", Helvetica;
+}
+
+.carousel-inner > .item > img.krearts-carousel {
+  margin: auto;
+  height: 600px;
+}
