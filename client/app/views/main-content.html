@@ -1,13 +1,22 @@
-<div ng-include="'views/subviews/header.html'"></div>
+<div ng-controller="FirstPageCtrl" ng-switch on="$route.current.activetab">
+  <div ng-switch-when="firstPage">
+    <div ng-view></div>
+  </div>
 
-<div class="krearts-content container-fluid">
-  <div class="row">
-    <div class="col-lg-12">
-      <div class="krearts-dark-pane">
-        <div ng-view></div>
+  <div ng-switch-default>
+    <div ng-include="'views/subviews/header.html'"></div>
+
+    <div class="krearts-content container-fluid">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="krearts-dark-pane">
+            <div ng-view></div>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</div>
 
-<div ng-include="'views/subviews/footer.html'"></div>
+    <div ng-include="'views/subviews/footer.html'"></div>
+  </div>
+
+</div>

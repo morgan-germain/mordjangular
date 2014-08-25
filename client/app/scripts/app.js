@@ -14,6 +14,10 @@ var app = angular.module('mainApp', [
 app.config(['$routeProvider', function ($routeProvider) {
   $routeProvider
     .when('/', {
+      templateUrl: 'views/first-page.html',
+      activetab: 'firstPage'
+    })
+    .when('/home', {
       templateUrl: 'views/home.html',
       controller: 'mainCtrl',
       activetab: 'home'
