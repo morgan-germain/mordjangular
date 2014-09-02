@@ -74,6 +74,11 @@ app.config(['$routeProvider', function ($routeProvider) {
       controller: 'mainCtrl',
       activetab: 'artists'
     })
+    .when('/artists/komak', {
+      templateUrl: 'views/artists-komak.html',
+      controller: 'mainCtrl',
+      activetab: 'artists'
+    })
 
     .otherwise({
       redirectTo: '/'
