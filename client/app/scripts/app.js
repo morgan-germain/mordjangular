@@ -19,63 +19,51 @@ app.config(['$routeProvider', function ($routeProvider) {
     })
     .when('/about', {
       templateUrl: 'views/about.html',
-      controller: 'mainCtrl',
       activetab: 'about'
     })
     .when('/artists', {
       templateUrl: 'views/artists.html',
-      controller: 'mainCtrl',
       activetab: 'artists'
     })
     .when('/contact', {
       templateUrl: 'views/contact.html',
-      controller: 'mainCtrl',
       activetab: 'contact'
     })
     .when('/links', {
       templateUrl: 'views/links.html',
-      controller: 'mainCtrl',
       activetab: 'links'
     })
     .when('/partners', {
       templateUrl: 'views/partners.html',
-      controller: 'mainCtrl',
       activetab: 'partners'
     })
 
     .when('/artists/arcaide', {
       templateUrl: 'views/artists-arcaide.html',
-      controller: 'mainCtrl',
       activetab: 'artists'
     })
     .when('/artists/jet-set-willy', {
       templateUrl: 'views/artists-jet-set-willy.html',
-      controller: 'mainCtrl',
       activetab: 'artists'
     })
     .when('/artists/difoss', {
       templateUrl: 'views/artists-difoss.html',
-      controller: 'mainCtrl',
       activetab: 'artists'
     })
     .when('/artists/razor-head', {
       templateUrl: 'views/artists-razor-head.html',
-      controller: 'mainCtrl',
       activetab: 'artists'
     })
     .when('/artists/toxicazsid', {
       templateUrl: 'views/artists-toxicazsid.html',
-      controller: 'mainCtrl',
       activetab: 'artists'
     })
     .when('/artists/fist-fucking-armageddon', {
       templateUrl: 'views/artists-fist-fucking-armageddon.html',
-      controller: 'mainCtrl',
       activetab: 'artists'
     })
     .when('/artists/komak', {
       templateUrl: 'views/artists-komak.html',
-      controller: 'mainCtrl',
       activetab: 'artists'
     })
 
