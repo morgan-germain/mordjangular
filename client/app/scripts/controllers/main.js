@@ -2,17 +2,10 @@
 
 var mainModule = angular.module('mainModule', []);
 
-mainModule.controller('mainCtrl', ['$rootScope', '$route',
+mainModule.controller('headerCtrl', ['$scope', '$route',
       function ($scope, $route) {
   // Keep route scope to obtain active tab
   $scope.$route = $route;
-
-  $scope.toxicazsid = [
-    {title: 'Toxicazsid-BelowMyBunker', url: 'http://krearts.fr/audio/toxicazsid/Toxicazsid-BelowMyBunker.mp3'},
-    {title: 'Toxicazsid-FollowingCold', url: 'http://krearts.fr/audio/toxicazsid/Toxicazsid-FollowingCold.mp3'},
-    {title: 'Toxicazsid-Mescaline', url: 'http://krearts.fr/audio/toxicazsid/Toxicazsid-Mescaline.mp3'},
-  ];
-
 }]);
 
 mainModule.controller('contactCtrl', ['$scope', '$http', function ($scope, $http) {

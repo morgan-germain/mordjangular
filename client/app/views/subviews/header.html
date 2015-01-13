@@ -1,4 +1,4 @@
-<nav>
+<nav ng-controller='headerCtrl'>
   <div class="hidden-xs krearts-logos">
     <img class="krearts-logo" src="images/theme/krearts-logo.png" alt='krearts logo'/>
     <img class="krearts-title" src="images/theme/krearts-title.png" alt='krearts'/>
@@ -22,27 +22,27 @@
           <img class="krearts-slashes-left" src="images/theme/krearts-navbar-slashes-left.png" />
         </div>
         <li ng-class="{active: $route.current.activetab == 'home'}">
-          <a class="krearts-link" ng-href="#">
+          <a class="krearts-link" href="/#/">
             <img src="images/theme/krearts-menu-home.png" alt="home"/>
           </a>
         </li>
         <li ng-class="{active: $route.current.activetab == 'artists'}" class="bold">
-          <a class="krearts-link" ng-href="#artists">
+          <a class="krearts-link" href="/#/artists">
             <img src="images/theme/krearts-menu-artists.png" alt="artists"/>
           </a>
         </li>
         <li ng-class="{active: $route.current.activetab == 'about'}">
-          <a class="krearts-link" ng-href="#about">
+          <a class="krearts-link" href="/#/about">
             <img src="images/theme/krearts-menu-about.png" alt="about"/>
           </a>
         </li>
         <li ng-class="{active: $route.current.activetab == 'contact'}">
-          <a class="krearts-link" ng-href="#contact">
+          <a class="krearts-link" href="/#/contact">
             <img src="images/theme/krearts-menu-contact.png" alt="contact"/>
           </a>
         </li>
         <li ng-class="{active: $route.current.activetab == 'links'}">
-          <a class="krearts-link" ng-href="#links">
+          <a class="krearts-link" href="/#/links">
             <img src="images/theme/krearts-menu-links.png" alt="links"/>
           </a>
         </li>
