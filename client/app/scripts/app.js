@@ -66,6 +66,10 @@ app.config(['$routeProvider', function ($routeProvider) {
       templateUrl: 'views/artists-komak.html',
       activetab: 'artists'
     })
+    .when('/artists/arnaud-grimmer', {
+      templateUrl: 'views/artists-arnaud-grimmer.html',
+      activetab: 'artists'
+    })
 
     .otherwise({
       redirectTo: '/'

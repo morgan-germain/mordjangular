@@ -21,8 +21,8 @@
   "overrides": {
     "jplayer": {
       "main": [
-        "./jquery.jplayer/jquery.jplayer.js",
-        "./add-on/jplayer.playlist.js"
+        "./dist/jplayer/jquery.jplayer.js",
+        "./dist/add-on/jplayer.playlist.js"
       ]
     }
   },
