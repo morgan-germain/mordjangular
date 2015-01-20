@@ -11,7 +11,7 @@ mainModule.controller('ArcaideCtrl', ['$scope', function ($scope) {
     oga: 'http://krearts.fr/audio/groupes/Arcaide/N%C3%B4va.ogg',
   }, {
     artist: 'Arcaide',
-    title: '[DEMO] 2014 - Negredite Xydo',
+    title: '2014 - Negredite Xydo',
     mp3: 'http://krearts.fr/audio/groupes/Arcaide/Negredite%20Xydoo.mp3',
     oga: 'http://krearts.fr/audio/groupes/Arcaide/Negredite%20Xydoo.ogg',
   }, {
